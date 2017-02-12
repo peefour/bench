@@ -106,15 +106,27 @@ Install X Code (from App store) and HomeBrew (http://brew.sh/) first
 
 If you are on a fresh server and logged in as root, use --user flag to create a user and install using that user
 
-	python install.py --develop --user frappe
+For development:
+In development erpnext is NOT automatically installed by the script.
 
-For the current user:
+	if you want to install for a user 'frappe':
 
-	sudo python install.py --develop
+		python install.py --develop --user frappe
+
+	or if you do not want to install for the default user 'frappe', but instead want to install for the current user:
+
+		sudo python install.py --develop
 
 For production:
-
-	sudo python install.py --production
+In production erpnext is automatically installed by the script.
+	
+	install for a user 'frappe':
+	
+		python install.py --production --user frappe 
+	
+	or install for the current user:
+	
+	sudo python install.py --production 
 
 #### What will this script do?
 
